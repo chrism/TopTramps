@@ -5,13 +5,14 @@
   <% @people.each do |person| %>
     <article class="person">
       <header>
-        <h2><%= person.name %></h2>
+        <h2><%= link_to person.name, person_path(person) %></h2>
         <h4><%= person.description %></h4>
         <%= link_to h(image_tag(person.image_url)), person_path(person) %>
       </header>
       <%= person.summary %>    
       <ul>
         <li>Age: <%= person.age %></li>
+        <li>Friends: <%= person.friends %></li>
         <li>Weight: <%= person.weight %></li>
         <li>Height: <%= person.height %></li>
         <li>Stash: <%= person.wealth %></li>

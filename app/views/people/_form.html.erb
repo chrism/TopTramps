@@ -20,8 +20,12 @@
     <%= f.number_field :littlesis_id %>
   </div>
   <div class="field">
-    <%= f.label :position %><br />
-    <%= f.text_field :position %>
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
   </div>
   <div class="field">
     <%= f.label :summary %><br />
@@ -52,12 +56,8 @@
     <%= f.number_field :weight %>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br />
-    <%= f.text_field :image_url %>
-  </div>
-  <div class="field">
-    <%= f.label :donations %><br />
-    <%= f.text_field :donations %>
+    <%= f.label :payoffs %><br />
+    <%= f.text_field :payoffs %>
   </div>
   <div class="actions">
     <%= f.submit %>
