@@ -19,6 +19,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'acts_as_list'
 
 # Use unicorn as the web server
 # gem 'unicorn'

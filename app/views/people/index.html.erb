@@ -1,9 +1,10 @@
 <h1>Listing people</h1>
 
 
-<section id="people">
+<section id="people" data-update-url="<%= sort_people_url %>">
   <% @people.each do |person| %>
-    <article class="person">
+    <!-- <article class="person"> -->
+      <%= content_tag_for :article, person do %>
       <header>
         <h2><%= link_to person.name, person_path(person) %></h2>
         <h4><%= person.description %></h4>
@@ -21,7 +22,8 @@
       <footer>
         <%= link_to 'Show', person %> ! <%= link_to 'Edit', edit_person_path(person) %> ! <%= link_to 'Destroy', person, confirm: 'Are you sure?', method: :delete %>
       </footer>
-    </article>
+    <!-- </article> -->
+    <% end %>
   <% end %>
 </section>
 

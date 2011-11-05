@@ -2,6 +2,8 @@ require 'nokogiri'
 require 'open-uri'
 
 class Person < ActiveRecord::Base
+  
+  acts_as_list
 
   def self.update_from_littlesis(list_url)   
     doc = Nokogiri::XML(open(list_url))  

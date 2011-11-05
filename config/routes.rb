@@ -1,7 +1,9 @@
 Toptramps::Application.routes.draw do
   resources :decks
 
-  resources :people
+  resources :people do
+    collection { post :sort }
+  end
   
   root :to => 'people#index'
 

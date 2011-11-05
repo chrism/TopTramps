@@ -3,7 +3,7 @@ class PeopleController < ApplicationController
   # GET /people.json
   # GET /people.xml
   def index
-    @people = Person.where("image_url IS NOT NULL").where("image_url != ''").where("age IS NOT NULL").where("friends IS NOT NULL")
+    @people = Person.where("image_url IS NOT NULL").where("image_url != ''").where("age IS NOT NULL").where("friends IS NOT NULL").order("position")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -53,6 +53,13 @@ class PeopleController < ApplicationController
         format.json { render json: @person.errors, status: :unprocessable_entity }
       end
     end
+  end
+  
+  def sort
+    params[:person].each_with_index do |id, index|
+      Person.update_all({position: index+1}, {id: id})
+    end
+    render nothing: true
   end
 
   # PUT /people/1
