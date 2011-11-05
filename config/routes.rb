@@ -1,4 +1,6 @@
 Toptramps::Application.routes.draw do
+  resources :decks
+
   resources :people
   
   root :to => 'people#index'
