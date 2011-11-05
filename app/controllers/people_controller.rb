@@ -2,7 +2,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    @people = Person.all
+    @people = Person.where("image_url IS NOT NULL").where("image_url != ''").where("age IS NOT NULL")
 
     respond_to do |format|
       format.html # index.html.erb

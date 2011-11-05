@@ -1,44 +1,28 @@
 <h1>Listing people</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Littlesis</th>
-    <th>Position</th>
-    <th>Summary</th>
-    <th>Organization</th>
-    <th>Age</th>
-    <th>Wealth</th>
-    <th>Friends</th>
-    <th>Height</th>
-    <th>Weight</th>
-    <th>Image url</th>
-    <th>Donations</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @people.each do |person| %>
-  <tr>
-    <td><%= person.name %></td>
-    <td><%= person.littlesis_id %></td>
-    <td><%= person.position %></td>
-    <td><%= person.summary %></td>
-    <td><%= person.organization %></td>
-    <td><%= person.age %></td>
-    <td><%= person.wealth %></td>
-    <td><%= person.friends %></td>
-    <td><%= person.height %></td>
-    <td><%= person.weight %></td>
-    <td><%= person.image_url %></td>
-    <td><%= person.donations %></td>
-    <td><%= link_to 'Show', person %></td>
-    <td><%= link_to 'Edit', edit_person_path(person) %></td>
-    <td><%= link_to 'Destroy', person, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+<section id="people">
+  <% @people.each do |person| %>
+    <article class="person">
+      <header>
+        <h2><%= person.name %></h2>
+        <h4><%= person.description %></h4>
+        <%= link_to h(image_tag(person.image_url)), person_path(person) %>
+      </header>
+      <%= person.summary %>    
+      <ul>
+        <li>Age: <%= person.age %></li>
+        <li>Weight: <%= person.weight %></li>
+        <li>Height: <%= person.height %></li>
+        <li>Stash: <%= person.wealth %></li>
+        <li>Payoffs: <%= person.payoffs %></li>
+      </ul>
+      <footer>
+        <%= link_to 'Show', person %> ! <%= link_to 'Edit', edit_person_path(person) %> ! <%= link_to 'Destroy', person, confirm: 'Are you sure?', method: :delete %>
+      </footer>
+    </article>
+  <% end %>
+</section>
 
 <br />
 
