@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  littlesis_id: 1
+  position: MyString
+  summary: MyText
+  organization: MyString
+  age: 1
+  wealth: 9.99
+  friends: 1
+  height: 1
+  weight: 1
+  image_url: MyString
+  donations: 9.99
+
+two:
+  name: MyString
+  littlesis_id: 1
+  position: MyString
+  summary: MyText
+  organization: MyString
+  age: 1
+  wealth: 9.99
+  friends: 1
+  height: 1
+  weight: 1
+  image_url: MyString
+  donations: 9.99
