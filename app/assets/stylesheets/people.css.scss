@@ -48,11 +48,15 @@
 	}
 	
 	.back {
-		overflow: scroll;
+		overflow: hidden;
 	}
 	
-	&:hover .card {
+/*	&:hover .card {
 			-webkit-transform: rotateY(180deg);				
+		}*/
+		
+		.rotated {
+			-webkit-transform: rotateY(180deg);
 		}
 		
 	img {
@@ -84,13 +88,18 @@
 		}
 	}
 	ul {
+		color: black;
+		text-shadow: 0 1px 1px #fff;
 		list-style-type:none;
-		font-size: 16px;
+		font-size: 13px;
+		float:left;
 		li {
 			line-height: 2em;
-			width:50%;
-			float:left;
 		}
+		
+	}	
+	ul.details {
+		width: 40%;
 	}
 	footer {
 		clear:left;

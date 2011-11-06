@@ -5,4 +5,10 @@ jQuery ->
 	$('#people').sortable(
 		update: ->
 			$.post($(this).data('update-url'), $(this).sortable('serialize'))
-		)
+	)
+	$('.card').click ->
+		$(this).toggleClass('rotated')
+		    # -> $(this).css("-webkit-transform", 'rotateY(180deg)')
+		    # -> $(this).css("-webkit-transform", 'none')
+		
+		#)

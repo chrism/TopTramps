@@ -13,11 +13,14 @@
             <h2><%= link_to person.name, person_path(person) %></h2>
             <h4><%= person.description %></h4>
           </header>
-                  <%= link_to h(image_tag(person.image_url)), person_path(person) %>
-          <ul>
-            <li class="first">Age: <strong><%= person.age %></strong></li>
+                  <%= image_tag(person.image_url) %>
+          <ul class="details">
+            <li>Age: <strong><%= person.age %></strong></li>
             <li>Friends: <strong><%= person.friends %></strong></li>
-            <li class="second">Stash: <strong><%= person.wealth %></strong></li>
+          </ul>
+          <ul>
+            <li>Stash: <strong><%= person.wealth %></strong></li>
+            
             <li>Payoffs: <strong><%= person.payoffs %></strong></li>
           </ul>
         </div>
