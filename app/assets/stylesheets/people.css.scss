@@ -2,8 +2,156 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#people {
+	clear:left;
+}
+
 .person {
-	border: 1px solid black;
-	margin-bottom: 2em;
-	padding: 1em;
+	/* for spin*/
+	-webkit-perspective: 1000;
+	
+	float: left;
+	width: 320px;
+	height: 500px;
+	@include inline-block;
+	margin: 2em;
+	
+	.card {
+		-webkit-transform-style: preserve-3d;
+		-webkit-transition: 0.5s;
+	
+		
+		width: 320px;
+		height: 470px;
+		
+
+	}
+	
+	.face {
+		-webkit-backface-visibility: hidden;
+		position: absolute;
+		
+		@include border-radius(10px);
+		@include box-shadow(3px 3px 10px 0 #000000);
+		padding: 15px;
+		border: 2px solid #ffffff;
+		background-image:url("roughcloth.png");
+		height: 430px;
+	}
+	
+	.front {
+		z-index: 10;
+	}
+	
+	.back {
+		-webkit-transform: rotateY(180deg);
+	}
+	
+	.back {
+		overflow: scroll;
+	}
+	
+	&:hover .card {
+			-webkit-transform: rotateY(180deg);				
+		}
+		
+	img {
+		width: 286px;
+		height: 350px;
+	}
+	header {
+		background-color: rgba(0,0,0,0.6);
+		margin-top: 250px;
+		text-align: center;
+		width: 286px;
+		position:absolute;
+		min-height: 90px;
+		padding-top: 10px;
+		text-shadow: 0 -1px 1px #000;
+		h2 {
+			font-size: 16px;
+			text-transform: uppercase;
+			
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+		h4 {
+			padding: 0 5px;
+			font-size: 14px;
+			color: rgba(255,255,255,0.6);
+		}
+	}
+	ul {
+		list-style-type:none;
+		font-size: 16px;
+		li {
+			line-height: 2em;
+			width:50%;
+			float:left;
+		}
+	}
+	footer {
+		clear:left;
+		padding-top: 15px;
+		color: #612713;
+		a {
+			color:black;
+			text-shadow: 0 1px 1px #ef9a79;
+			text-decoration: none;
+			font-family: TypewriterSerial-Bold;
+			&:hover {
+				color: white;
+				text-shadow: 0 -1px 1px #000000;
+			}
+		}
+	}
+}
+
+#form {
+	clear:left;
+	padding: 20px;
+	color: black;
+	font-size: 16px;
+	text-shadow: 0 1px 1px #ef9a79;
+	
+	section.first {
+		float: left;
+		padding-right: 30px;
+	}
+	
+	.actions {
+		clear:left;
+	}
+	
+	label {
+		padding-top: 10px;
+		font-family: TypewriterSerial-Bold;
+		font-size: 18px;
+	}
+}
+
+#full-details {
+	clear: left;
+	padding: 20px;
+	p {
+	font-size: 20px;
+	color: black;
+	text-shadow: 0 1px 1px #ef9a79;
+	line-height: 2em;
+	}
+}
+
+a.big-link {
+	padding-left: 20px;
+	font-size: 20px;
+	color:black;
+	text-shadow: 0 1px 1px #ef9a79;
+	text-decoration: none;
+	font-family: TypewriterSerial-Bold;
+	&:hover {
+		color: white;
+		text-shadow: 0 -1px 1px #000000;
+	}
 }

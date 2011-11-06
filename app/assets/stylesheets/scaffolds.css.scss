@@ -1,27 +1,32 @@
 body {
-  background-color: #fff;
+  background-image:url("dark-red-mahogany.jpg");
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
+	font-family: TypewriterSerial;
+	font-weight: normal;
+	font-style: normal;
+ }
+
+strong, h1, h2, h3, h4, h5, h6 {
+	font-family: TypewriterSerial-Bold;
+	font-weight: normal;
+	font-style: normal;
+}
+
+header#page {
+	margin: 2em;
+	margin-top: 4em;
+	h1 {
+		color: white;
+		text-shadow: 0 1px 1px #000;
+		font-size: 40px;
+		float:left;
+		padding-right: 40px;
+	}
+}
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px; }
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px; }
-
-a {
-  color: #000;
-  &:visited {
-    color: #666; }
-  &:hover {
-    color: #fff;
-    background-color: #000; } }
 
 div {
   &.field, &.actions {
@@ -53,4 +58,37 @@ div {
     color: #fff; }
   ul li {
     font-size: 12px;
-    list-style: square; } }
+    list-style: square; }
+}
+
+
+a.button, input[type="submit"] {
+	@include button(shiny, #333333);
+	font-family: TypewriterSerial-Bold;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+}
+
+#main-footer {
+	clear: left;
+	background-color: rgba(0,0,0,0.5);
+	padding: 20px;
+	padding-top: 25px;
+	margin-top: 20px;
+	p {
+		color:black;
+		font-size: 16px;
+		text-shadow: 0 1px 0 #333;
+		a {
+			color: white;
+			text-decoration: none;
+			text-shadow: 0 -1px 1px #000;
+		}
+	}
+}
+
+

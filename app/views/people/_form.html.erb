@@ -1,65 +1,72 @@
-<%= form_for(@person) do |f| %>
-  <% if @person.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+<section id="form">
+  <%= form_for(@person) do |f| %>
+    <% if @person.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
 
-      <ul>
-      <% @person.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @person.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <section class="first">
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :littlesis_id %><br />
+        <%= f.number_field :littlesis_id %>
+      </div>
+      <div class="field">
+        <%= f.label :image_url %><br />
+        <%= f.text_field :image_url %>
+      </div>
+      <div class="field">
+        <%= f.label :description %><br />
+        <%= f.text_field :description %>
+      </div>
+      <div class="field">
+        <%= f.label :summary %><br />
+        <%= f.text_area :summary %>
+      </div>
+    </section>
+    <section class="second">
+      <div class="field">
+        <%= f.label :organization %><br />
+        <%= f.text_field :organization %>
+      </div>
+      <div class="field">
+        <%= f.label :age %><br />
+        <%= f.number_field :age %>
+      </div>
+      <div class="field">
+        <%= f.label :wealth %><br />
+        <%= f.text_field :wealth %>
+      </div>
+      <div class="field">
+        <%= f.label :friends %><br />
+        <%= f.number_field :friends %>
+      </div>
+      <div class="field">
+        <%= f.label :height %><br />
+        <%= f.number_field :height %>
+      </div>
+      <div class="field">
+        <%= f.label :weight %><br />
+        <%= f.number_field :weight %>
+      </div>
+      <div class="field">
+        <%= f.label :payoffs %><br />
+        <%= f.text_field :payoffs %>
+      </div>
+    </section>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :littlesis_id %><br />
-    <%= f.number_field :littlesis_id %>
-  </div>
-  <div class="field">
-    <%= f.label :image_url %><br />
-    <%= f.text_field :image_url %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :summary %><br />
-    <%= f.text_area :summary %>
-  </div>
-  <div class="field">
-    <%= f.label :organization %><br />
-    <%= f.text_field :organization %>
-  </div>
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :wealth %><br />
-    <%= f.text_field :wealth %>
-  </div>
-  <div class="field">
-    <%= f.label :friends %><br />
-    <%= f.number_field :friends %>
-  </div>
-  <div class="field">
-    <%= f.label :height %><br />
-    <%= f.number_field :height %>
-  </div>
-  <div class="field">
-    <%= f.label :weight %><br />
-    <%= f.number_field :weight %>
-  </div>
-  <div class="field">
-    <%= f.label :payoffs %><br />
-    <%= f.text_field :payoffs %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  
+</section>

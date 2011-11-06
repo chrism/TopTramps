@@ -30,6 +30,15 @@ gem 'acts_as_list'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+gem 'bourbon'
+gem 'flutie'
+
+group :development do
+  gem 'rb-fsevent'
+  gem "guard-livereload", "~> 0.3.1"
+  gem "growl_notify"
+end
+
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false

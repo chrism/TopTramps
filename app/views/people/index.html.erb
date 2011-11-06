@@ -1,32 +1,34 @@
-<h1>Listing people</h1>
+<header id="page">
+  <h1>Wall Street Top Tramp$</h1>
+  <%= link_to 'Add A New Person', new_person_path, :class => "button" %>
+</header>
 
 
 <section id="people" data-update-url="<%= sort_people_url %>">
   <% @people.each do |person| %>
-    <!-- <article class="person"> -->
       <%= content_tag_for :article, person do %>
-      <header>
-        <h2><%= link_to person.name, person_path(person) %></h2>
-        <h4><%= person.description %></h4>
-        <%= link_to h(image_tag(person.image_url)), person_path(person) %>
-      </header>
-      <%= person.summary %>    
-      <ul>
-        <li>Age: <%= person.age %></li>
-        <li>Friends: <%= person.friends %></li>
-        <li>Weight: <%= person.weight %></li>
-        <li>Height: <%= person.height %></li>
-        <li>Stash: <%= person.wealth %></li>
-        <li>Payoffs: <%= person.payoffs %></li>
-      </ul>
+      <div class="card">
+        <div class="face front">
+          <header>
+            <h2><%= link_to person.name, person_path(person) %></h2>
+            <h4><%= person.description %></h4>
+          </header>
+                  <%= link_to h(image_tag(person.image_url)), person_path(person) %>
+          <ul>
+            <li class="first">Age: <strong><%= person.age %></strong></li>
+            <li>Friends: <strong><%= person.friends %></strong></li>
+            <li class="second">Stash: <strong><%= person.wealth %></strong></li>
+            <li>Payoffs: <strong><%= person.payoffs %></strong></li>
+          </ul>
+        </div>
+        <div class="face back">
+            <h2><%= person.name %></h2>
+            <p><%= person.summary %></p>
+        </div>
+      </div>
       <footer>
-        <%= link_to 'Show', person %> ! <%= link_to 'Edit', edit_person_path(person) %> ! <%= link_to 'Destroy', person, confirm: 'Are you sure?', method: :delete %>
+        <a href="#">Drag to position</a> | <%= link_to 'Show', person %> | <%= link_to 'Edit', edit_person_path(person) %> | <%= link_to 'Destroy', person, confirm: 'Are you sure?', method: :delete %>
       </footer>
-    <!-- </article> -->
     <% end %>
   <% end %>
 </section>
-
-<br />
-
-<%= link_to 'New Person', new_person_path %>

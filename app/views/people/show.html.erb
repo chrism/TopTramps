@@ -1,65 +1,71 @@
-<p id="notice"><%= notice %></p>
+<header id="page">
+  <h1>Tramp$ Full Details</h1>
+</header>
 
-<p>
-  <b>Name:</b>
-  <%= @person.name %>
-</p>
+<section id="full-details">
+  <h4>Name:</h4>
+  <p>
+    
+    <%= @person.name %>
+  </p>
+<h4>Image url:</h4>
+  <p>
+    
+    <%= @person.image_url %>
+  </p>
+<h4>Littlesis:</h4>
+  <p>
+    
+    <%= @person.littlesis_id %>
+  </p>
+<h4>Description:</h4>
+  <p>
+    
+    <%= @person.description %>
+  </p>
+ <h4>Summary:</h4>
+  <p>
+   
+    <%= @person.summary %>
+  </p>
+<h4>Organization:</h4>
+  <p>
+    
+    <%= @person.organization %>
+  </p>
+ <h4>Age:</h4>
+  <p>
+   
+    <%= @person.age %>
+  </p>
+    <h4>Wealth:</h4>
+  <p>
 
-<p>
-  <b>Image url:</b>
-  <%= @person.image_url %>
-</p>
+    <%= @person.wealth %>
+  </p>
+ <h4>Friends:</h4>
+  <p>
+   
+    <%= @person.friends %>
+  </p>
 
-<p>
-  <b>Littlesis:</b>
-  <%= @person.littlesis_id %>
-</p>
+  <!-- <p>
+    <h4>Height:</h4>
+    <%= @person.height %>
+  </p>
 
-<p>
-  <b>Description:</b>
-  <%= @person.description %>
-</p>
-
-<p>
-  <b>Summary:</b>
-  <%= @person.summary %>
-</p>
-
-<p>
-  <b>Organization:</b>
-  <%= @person.organization %>
-</p>
-
-<p>
-  <b>Age:</b>
-  <%= @person.age %>
-</p>
-
-<p>
-  <b>Wealth:</b>
-  <%= @person.wealth %>
-</p>
-
-<p>
-  <b>Friends:</b>
-  <%= @person.friends %>
-</p>
-
-<p>
-  <b>Height:</b>
-  <%= @person.height %>
-</p>
-
-<p>
-  <b>Weight:</b>
-  <%= @person.weight %>
-</p>
-
-<p>
-  <b>Payoffs:</b>
-  <%= @person.payoffs %>
-</p>
+  <p>
+    <h4>Weight:</h4>
+    <%= @person.weight %>
+  </p> -->
+ <h4>Payoffs:</h4>
+  <p>
+   
+    <%= @person.payoffs %>
+  </p>
+  
+</section>
 
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<%= link_to 'Edit', edit_person_path(@person), :class => "big-link" %> |
+<%= link_to 'Back', people_path, :class => "big-link" %>
