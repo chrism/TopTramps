@@ -19,8 +19,8 @@
             <li>Friends: <strong><%= person.friends %></strong></li>
           </ul>
           <ul>
-            <li>Stash: <strong><%= person.wealth %></strong></li>
-            <li>Payoffs: <strong><%= person.payoffs %></strong></li>
+            <li>Stash: <strong><%= number_to_human(person.wealth)  %></strong></li>
+            <li>Payoffs: <strong><%= number_to_human(person.payoffs) %></strong></li>
           </ul>
         </div>
         <div class="face back">

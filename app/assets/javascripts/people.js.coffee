@@ -8,7 +8,3 @@ jQuery ->
 	)
 	$('.card').click ->
 		$(this).toggleClass('rotated')
-		    # -> $(this).css("-webkit-transform", 'rotateY(180deg)')
-		    # -> $(this).css("-webkit-transform", 'none')
-		
-		#)
