@@ -1,4 +1,7 @@
 class PeopleController < ApplicationController
+  # quick and dirty delete blocker
+  http_basic_authenticate_with :name => "alan", :password => "greenspan", :only => :destroy
+  
   # GET /people
   # GET /people.json
   # GET /people.xml

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111106091650) do
+ActiveRecord::Schema.define(:version => 20111105134757) do
 
   create_table "decks", :force => true do |t|
     t.integer  "littlesis_id"
@@ -26,12 +26,12 @@ ActiveRecord::Schema.define(:version => 20111106091650) do
     t.text     "summary"
     t.string   "organization"
     t.integer  "age"
-    t.integer  "wealth"
+    t.decimal  "wealth"
     t.integer  "friends"
     t.integer  "height"
     t.integer  "weight"
     t.string   "image_url"
-    t.integer  "payoffs"
+    t.decimal  "payoffs"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "position"
