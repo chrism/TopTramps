@@ -6,7 +6,8 @@ class PeopleController < ApplicationController
   # GET /people.json
   # GET /people.xml
   def index
-    @people = Person.where("image_url IS NOT NULL").where("image_url != ''").where("age IS NOT NULL").where("friends IS NOT NULL").order("position")
+    # @people = Person.where("image_url IS NOT NULL").where("image_url != ''").where("age IS NOT NULL").where("friends IS NOT NULL").order("position")
+    @people = Person.order("position")
 
     respond_to do |format|
       format.html # index.html.erb
